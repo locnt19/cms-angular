@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bookstore-cms": {
+    "cms-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -42,7 +42,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bookstore-cms",
+            "outputPath": "dist/cms-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -90,18 +90,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "bookstore-cms:build"
+            "browserTarget": "cms-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "bookstore-cms:build:production"
+              "browserTarget": "cms-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bookstore-cms:build"
+            "browserTarget": "cms-angular:build"
           }
         },
         "test": {
@@ -138,16 +138,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "bookstore-cms:serve"
+            "devServerTarget": "cms-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "bookstore-cms:serve:production"
+              "devServerTarget": "cms-angular:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "bookstore-cms"
+  "defaultProject": "cms-angular"
 }
